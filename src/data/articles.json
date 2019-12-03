@@ -1,0 +1,51 @@
+[
+  {
+    "title": "AURORA BOREALIS",
+    "path": "/blog",
+    "subheader": "The thrill of witnessing the Aurora Borealis is a once-in-a-lifetime experience for many. Finland is one of the best places on Earth to spot the Northern Lights – they appear on more than 200 nights a year in Finnish Lapland.",
+    "author": "Alexander",
+    "date": "14.10.2019",
+    "category": "Winter",
+    "img": "aurora.jpg"
+  },
+  {
+    "title": "MIDNIGHT SUN",
+    "subheader": "In the summer Finnish Lapland bathes in 24-hour sunlight for nearly three months. It is an incredible contrast to the darkest winter months when there is no sun at all. “Midnight sun”, as this phenomenon is called, calls for many activities such as hiking on the beautiful fells or visiting cultural events.",
+    "author": "Alexander",
+    "date": "14.10.2019",
+    "category": "Summer",
+    "img": "midnight.jpg"
+  },
+  {
+    "title": "AUTUMN",
+    "subheader": "Autumnal Lapland is the best place in Finland for witnessing “ruska” – a short period when all the foliage turn into bright colors like red, yellow and orange. Seeing ruska makes looking at the already breath-taking landscape into an out-of-this-world experience. Best ruska-time is usually in mid-September, lasting around one week.",
+    "author": "Alexander",
+    "date": "15.10.2019",
+    "category": "Autumn",
+    "img": "autumn.jpg"
+  },
+  {
+    "title": "SKIING",
+    "subheader": "Lapland’s versatile ski resorts offer downhill enthusiasts everything from kids’ runs to black slopes, and snow parks to backcountry exploring. The season starts in late October, and high season spans from February until the snow melts in early May.",
+    "author": "Alexander",
+    "date": "15.10.2019",
+    "category": "Winter",
+    "img": "winter.jpg"
+  },
+  {
+    "title": "HUSKIES AND REINDEERS",
+    "subheader": "Lapland offers Finland’s best rides – would you be prefer to be shown around by a pack of happy hounds or Santa’s reindeer? Both are great ways to explore the snowy surroundings. Husky and reindeer rides can take from a few minutes to days long safaris.",
+    "author": "Alexander",
+    "date": "15.10.2019",
+    "category": "Winter",
+    "img": "huskey.jpg"
+  },
+  {
+    "title": "SANTA CLAUS",
+    "subheader": "Everyone knows the one and only Santa Claus is Finnish and lives in Lapland. However, as the exact location of his hideaway is not known, it is best to head to his Rovaniemi office. This is where he greets visitors all year round.",
+    "author": "Alexander",
+    "date": "16.10.2019",
+    "category": "Winter",
+    "img": "santa.jpg"
+  }
+]
