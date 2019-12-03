@@ -1,4 +1,4 @@
-# NORDIC GUIDES APPLICATION
+# Nordic Guide Client
 
 ## Demo 
 
