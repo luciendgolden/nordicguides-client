@@ -13,12 +13,12 @@
 
 <script>
 export default {
-  name: "FlipCard",
-  data: function() {
+  name: 'FlipCard',
+  data() {
     return {
-      flipped: false
+      flipped: false,
     };
-  }
+  },
 };
 </script>
 

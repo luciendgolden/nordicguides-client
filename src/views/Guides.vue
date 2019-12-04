@@ -49,99 +49,99 @@
 </template>
 
 <script>
-import HeroParallex from "@/components/HeroParallex.vue";
-import FlipCard from "@/components/base/FlipCard.vue";
-import TourGuide from "@/components/TourGuide.vue";
+import HeroParallex from '@/components/HeroParallex.vue';
+import FlipCard from '@/components/base/FlipCard.vue';
+import TourGuide from '@/components/TourGuide.vue';
 
 export default {
-  name: "guides",
+  name: 'guides',
   data() {
     return {
       displayInfo: {
-        alignment: "align-center",
-        justify: "justify-center",
+        alignment: 'align-center',
+        justify: 'justify-center',
         fillHeight: true,
-        img: "hero-guides-bg.jpg",
-        header: "GUIDES",
-        cta: false
+        img: 'hero-guides-bg.jpg',
+        header: 'GUIDES',
+        cta: false,
       },
       guides: [
         {
-          avatar: "1.jpg",
-          img: "huskey.jpg",
+          avatar: '1.jpg',
+          img: 'huskey.jpg',
           subInfo: "Let's find some beautiful places",
           personInfo: {
-            name: "Terry Lopez",
-            email: "terry.lopez@example.com",
-            birthdate: "7/2/1986",
-            address: "9602 Homestead Rd",
-            phone: "(896)-675-7311"
-          }
+            name: 'Terry Lopez',
+            email: 'terry.lopez@example.com',
+            birthdate: '7/2/1986',
+            address: '9602 Homestead Rd',
+            phone: '(896)-675-7311',
+          },
         },
         {
-          avatar: "2.jpg",
-          img: "midnight.jpg",
-          subInfo: "Wherever you go, go with all your heart",
+          avatar: '2.jpg',
+          img: 'midnight.jpg',
+          subInfo: 'Wherever you go, go with all your heart',
           personInfo: {
-            name: "Levi Gilbert",
-            email: "levi.gilbert@example.com",
-            birthdate: "3/7/1994",
-            address: "4151 Nowlin Rd",
-            phone: "(154)-278-4645"
-          }
+            name: 'Levi Gilbert',
+            email: 'levi.gilbert@example.com',
+            birthdate: '3/7/1994',
+            address: '4151 Nowlin Rd',
+            phone: '(154)-278-4645',
+          },
         },
         {
-          avatar: "3.jpg",
-          img: "santa.jpg",
-          subInfo: "With age, comes wisdom. With travel, comes understanding.",
+          avatar: '3.jpg',
+          img: 'santa.jpg',
+          subInfo: 'With age, comes wisdom. With travel, comes understanding.',
           personInfo: {
-            name: "Devon Morrison",
-            email: "devon.morrison@example.com",
-            birthdate: "1/7/1950",
-            address: "654 Taylor St",
-            phone: "(308)-287-5380"
-          }
+            name: 'Devon Morrison',
+            email: 'devon.morrison@example.com',
+            birthdate: '1/7/1950',
+            address: '654 Taylor St',
+            phone: '(308)-287-5380',
+          },
         },
         {
-          avatar: "4.jpg",
-          img: "winter.jpg",
-          subInfo: "Happy to help you",
+          avatar: '4.jpg',
+          img: 'winter.jpg',
+          subInfo: 'Happy to help you',
           personInfo: {
-            name: "Evan Fowler",
-            email: "evan.fowler@example.com",
-            birthdate: "1/2/1975",
-            address: "8612 Saddle Dr",
-            phone: "(358)-838-3941"
-          }
+            name: 'Evan Fowler',
+            email: 'evan.fowler@example.com',
+            birthdate: '1/2/1975',
+            address: '8612 Saddle Dr',
+            phone: '(358)-838-3941',
+          },
         },
         {
-          avatar: "5.jpg",
-          img: "autumn.jpg",
-          subInfo: "Let’s Be Adventurers.",
+          avatar: '5.jpg',
+          img: 'autumn.jpg',
+          subInfo: 'Let’s Be Adventurers.',
           personInfo: {
-            name: "Letitia Hughes",
-            email: "letitia.hughes@example.com",
-            birthdate: "5/6/1954",
-            address: "859 Camden Ave",
-            phone: "(758)-640-2236"
-          }
+            name: 'Letitia Hughes',
+            email: 'letitia.hughes@example.com',
+            birthdate: '5/6/1954',
+            address: '859 Camden Ave',
+            phone: '(758)-640-2236',
+          },
         },
         {
-          avatar: "6.jpg",
-          img: "aurora009.jpg",
+          avatar: '6.jpg',
+          img: 'aurora009.jpg',
           subInfo:
-            "Remember that happiness is a way of travel – not a destination.",
+            'Remember that happiness is a way of travel – not a destination.',
           personInfo: {
-            name: "Mike Parker",
-            email: "mike.parker@example.com",
-            birthdate: "4/3/1977",
-            address: "973 Mockingbird Ln",
-            phone: "(824)-270-1409"
-          }
-        }
-      ]
+            name: 'Mike Parker',
+            email: 'mike.parker@example.com',
+            birthdate: '4/3/1977',
+            address: '973 Mockingbird Ln',
+            phone: '(824)-270-1409',
+          },
+        },
+      ],
     };
   },
-  components: { HeroParallex, FlipCard, TourGuide }
+  components: { HeroParallex, FlipCard, TourGuide },
 };
 </script>

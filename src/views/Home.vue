@@ -117,7 +117,8 @@ export default {
             'At MAKARO we do things differently. We do not believe in compromise - but in courage and passion to break new ground. We believe in opportunities, in creativity and new ideas - and that you can even overcome opposites with them.',
         },
       ],
-      lorem: 'Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.',
+      lorem:
+        'Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.',
     };
   },
   computed: mapState(['articles']),

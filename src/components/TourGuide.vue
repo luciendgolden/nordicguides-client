@@ -41,12 +41,12 @@
 <script>
 export default {
   props: {
-    item: Object
+    item: Object,
   },
   computed: {
     randomNumber() {
       return Math.floor(Math.random() * 50) + 1;
-    }
-  }
+    },
+  },
 };
 </script>

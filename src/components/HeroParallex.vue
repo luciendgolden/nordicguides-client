@@ -27,7 +27,7 @@
 <script>
 export default {
   props: {
-    item: Object
+    item: Object,
   },
   data() {
     return {};
@@ -39,9 +39,9 @@ export default {
         [this.item.justify]: true,
         [this.item.flexDirection]: true,
         reverse: this.item.reverse,
-        "fill-height": this.item.fillHeight
+        'fill-height': this.item.fillHeight,
       };
-    }
-  }
+    },
+  },
 };
 </script>

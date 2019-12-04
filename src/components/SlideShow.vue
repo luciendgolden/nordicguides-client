@@ -17,10 +17,10 @@
 <script>
 export default {
   props: {
-    items: Array
+    items: Array,
   },
   data() {
     return {};
-  }
+  },
 };
 </script>

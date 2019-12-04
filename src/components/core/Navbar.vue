@@ -40,37 +40,37 @@
 export default {
   data() {
     return {
-      title: "FINVILLE",
+      title: 'FINVILLE',
       drawer: false,
       menu: [
         {
-          title: "Home",
-          path: "/",
-          icon: "home"
+          title: 'Home',
+          path: '/',
+          icon: 'home',
         },
         {
-          title: "Lapland",
-          path: "/lapland"
+          title: 'Lapland',
+          path: '/lapland',
         },
         {
-          title: "Blog",
-          path: "/blog"
+          title: 'Blog',
+          path: '/blog/auroras',
         },
         {
-          title: "Guides",
-          path: "/guides"
+          title: 'Guides',
+          path: '/guides',
         },
         {
-          title: "Contact",
-          path: "/contact"
-        }
-      ]
+          title: 'Contact',
+          path: '/contact',
+        },
+      ],
     };
   },
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer;
-    }
-  }
+    },
+  },
 };
 </script>

@@ -48,11 +48,11 @@ export default {
   props: {
     article: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   data() {
     return {};
-  }
+  },
 };
 </script>

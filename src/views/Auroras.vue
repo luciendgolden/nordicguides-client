@@ -91,9 +91,9 @@ export default {
   name: "auroras",
   computed: {
     items() {
-      let myArr = [];
+      const myArr = [];
 
-      for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < 9; i += 1) {
         myArr.push({
           img: `aurora00${i + 1}.jpg`
         });

@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/', name: 'home', component: Home },
   { path: '/lapland', name: 'lapland', component: Lapland },
-  { path: '/blog', name: 'blog', component: Auroras },
+  { path: '/blog/auroras', name: 'blog-auroras', component: Auroras },
   { path: '/guides', name: 'guides', component: Guides },
   { path: '/contact', name: 'contact', component: Contact },
 ];
@@ -20,4 +20,7 @@ export default new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
 });
