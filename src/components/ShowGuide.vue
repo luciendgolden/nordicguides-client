@@ -1,27 +1,49 @@
 <template>
-  <div class="show-guide">
+  <div v-if="guide" class="show-guide">
     <v-container fluid pa-0>
       <HeroParallex :item="displayInfo" />
     </v-container>
     <v-container>
-      <v-layout row>
+      <v-layout row wrap>
         <v-flex xs12>
           <v-card>
             <v-spacer></v-spacer>
             <v-avatar class="ma-3" size="150" color="grey lighten-4">
               <v-img
-                :src="require(`@/assets/guide/${guide.profileimage}`)"
-                :lazy-src="require(`@/assets/guide/${guide.profileimage}`)"
+                :src="require(`@/assets/guide/${guide.avatar}`)"
+                :lazy-src="require(`@/assets/guide/${guide.avatar}`)"
                 alt="avatar"
               />
             </v-avatar>
             <v-card-title primary-title>
               <div>
-                <div class="sh-w-div">{{ guide.firstname }} {{ guide.lastname }}</div>
-                <span class="grey--text">1,000 miles of wonder</span>
+                <div
+                  class="sh-w-div"
+                >{{ guide.personInfo.firstname }} {{ guide.personInfo.lastname }}</div>
+                <span class="grey--text">{{ guide.info }}</span>
               </div>
             </v-card-title>
+            <v-form>
+              <v-container>
+                <v-layout row wrap>
+                  <v-flex xs12 sm6 v-for="(value, key) in guide.personInfo" :key="value.id">
+                    <v-text-field :value="value" :label="key" readonly></v-text-field>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-form>
           </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <v-container>
+      <v-layout align-start justify-center column fill-height>
+        <v-flex xs12 ma-3>
+          <div>
+            <v-btn flat small color="primary" @click="$router.go(-1)">
+              <strong>← Previous Site</strong>
+            </v-btn>
+          </div>
         </v-flex>
       </v-layout>
     </v-container>
@@ -36,24 +58,30 @@ import { mapState } from 'vuex';
 export default {
   name: 'show-guide',
   data() {
-    return {
-      displayInfo: {
+    return {};
+  },
+  computed: {
+    ...mapState(['groups']),
+    guide() {
+      let id = this.$route.params.id;
+      return this.$store.getters.getGuides.find(element => element.id == id);
+    },
+    displayInfo() {
+      let img = this.guide.img;
+      return {
         alignment: 'align-center',
         justify: 'justify-center',
         fillHeight: true,
-        img: 'hero-guides-bg.jpg',
+        img,
         header: 'EXPLORE',
         cta: false,
-      },
-    };
-  },
-  methods: {},
-  computed: {
-    guide() {
-      let id = this.$route.params.id;
-      return this.members.find(element => element.memberID == id);
+      };
     },
-    ...mapState(['members']),
+  },
+  created() {
+    this.$store.dispatch('fetchGroups', {
+      id: this.$route.params.id,
+    });
   },
   components: { HeroParallex },
 };

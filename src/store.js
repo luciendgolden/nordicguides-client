@@ -13,6 +13,7 @@ const store = new Vuex.Store({
   state: {
     articles,
     members: [],
+    groups: [],
   },
   actions: {
     fetchMembers({ commit }) {
@@ -22,10 +23,20 @@ const store = new Vuex.Store({
         .then(data => commit('SET_MEMBERS', data))
         .catch(err => console.log(err));
     },
+    fetchGroups({ commit }, member) {
+      axios
+        .get(`${baseUrl}/group/${member.id}`)
+        .then(res => res.data)
+        .then(data => commit('SET_GROUPS', data))
+        .catch(err => console.log(err));
+    },
   },
   mutations: {
     SET_MEMBERS(state, members) {
       state.members = members;
+    },
+    SET_GROUPS(state, groups) {
+      state.groups = groups;
     },
   },
   getters: {
@@ -36,15 +47,18 @@ const store = new Vuex.Store({
         id: member.memberID,
         avatar: member.profileimage || 'no-avatar.png',
         img: cardImages[Math.floor(Math.random() * cardImages.length)],
-        subInfo: 'Lorem ipsum',
+        info: 'We are here to help',
         personInfo: {
-          name: `${member.firstname} ${member.lastname}`,
-          email: member.email,
+          firstname: member.firstname,
+          lastname: member.lastname,
           birthdate: member.birthdate || 'N/A',
-          address: `${member.street}`,
+          street: `${member.street}`,
           city: member.city,
           zip: member.zip,
           phone: member.phone || 'N/A',
+          email: member.email,
+          role: member.role,
+          driverslicense: member.driverslicense || 'N/A',
         },
       }));
     },

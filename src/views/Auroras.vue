@@ -14,7 +14,7 @@
               </div>
             </v-card-title>
 
-            <v-img :src="require(`@/assets/articles/aurora.jpg`)"></v-img>
+            <v-img :src="require(`@/assets/section/aurora.jpg`)"></v-img>
 
             <v-card-actions>
               <v-btn fab flat circle color="primary">

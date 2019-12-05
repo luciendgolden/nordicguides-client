@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-img :src="require(`@/assets/articles/${item.img}`)" />
+    <v-img :src="require(`@/assets/section/${item.img}`)" />
     <v-layout column align-center justify-center>
       <v-flex xs12 style="margin-top: -100px !important">
         <v-avatar size="150" color="grey lighten-4">
@@ -8,11 +8,12 @@
         </v-avatar>
       </v-flex>
       <v-flex xs12>
-        <div class="headline">{{item.personInfo.name}}</div>
+        <div class="headline">{{item.personInfo.firstname}} {{item.personInfo.lastname}}</div>
       </v-flex>
       <v-flex xs12>
-        <div class="subtitle font-weight-bold">
-          <v-icon color="secondary">mdi-account</v-icon>Guide
+        <div class="text-uppercase subtitle font-weight-bold">
+          <v-icon color="secondary">mdi-account</v-icon>
+          {{ item.personInfo.role }}
         </div>
       </v-flex>
     </v-layout>

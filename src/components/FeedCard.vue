@@ -2,7 +2,7 @@
   <v-flex xs12 md6>
     <base-card :height="350" color="grey lighten-1" dark>
       <v-img
-        :src="require(`@/assets/articles/${article.img}`)"
+        :src="require(`@/assets/section/${article.img}`)"
         height="100%"
         gradient="rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)"
       >
@@ -15,8 +15,7 @@
               text-color="white"
               small
               @click.stop
-              >{{ article.category }}</v-chip
-            >
+            >{{ article.category }}</v-chip>
             <h3 class="title font-weight-bold mb-2">{{ article.title }}</h3>
             <v-layout>
               <v-flex xs12 md10 offset-md2>

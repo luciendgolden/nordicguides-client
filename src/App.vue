@@ -33,7 +33,7 @@
 }
 
 .section-heading::after {
-  content: "";
+  content: '';
   display: block;
   width: 30%;
   border: 2px solid #ff4f2b;
@@ -47,6 +47,8 @@ import Content from '@/components/core/Content.vue';
 import Footer from '@/components/core/MyFooter.vue';
 import ScrollUp from '@/components/core/ScrollUp.vue';
 
+import { mapActions } from 'vuex';
+
 export default {
   name: 'App',
   components: {
@@ -54,6 +56,9 @@ export default {
     Content,
     Footer,
     ScrollUp,
+  },
+  created() {
+    this.$store.dispatch('fetchMembers');
   },
 };
 </script>
