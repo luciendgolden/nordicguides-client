@@ -1,33 +1,22 @@
 /* eslint-disable arrow-parens */
 import Vue from 'vue';
 import Vuex from 'vuex';
-import axios from 'axios';
+import Repository from '@/service/repository';
 
 Vue.use(Vuex);
 
 const articles = require('@/data/articles.json');
 
-const baseUrl = 'http://nordicguides-server.test/api';
-
 const store = new Vuex.Store({
   state: {
     articles,
     members: [],
-    groups: [],
   },
   actions: {
     fetchMembers({ commit }) {
-      axios
-        .get(`${baseUrl}/members`)
+      Repository.get('/members')
         .then(res => res.data)
         .then(data => commit('SET_MEMBERS', data))
-        .catch(err => console.log(err));
-    },
-    fetchGroups({ commit }, member) {
-      axios
-        .get(`${baseUrl}/group/${member.id}`)
-        .then(res => res.data)
-        .then(data => commit('SET_GROUPS', data))
         .catch(err => console.log(err));
     },
   },
@@ -35,20 +24,17 @@ const store = new Vuex.Store({
     SET_MEMBERS(state, members) {
       state.members = members;
     },
-    SET_GROUPS(state, groups) {
-      state.groups = groups;
-    },
   },
   getters: {
     getGuides: state => {
       const cardImages = ['autumn.jpg', 'huskey.jpg', 'midnight.jpg', 'santa.jpg', 'winter.jpg'];
 
       return state.members.map(member => ({
-        id: member.memberID,
         avatar: member.profileimage || 'no-avatar.png',
         img: cardImages[Math.floor(Math.random() * cardImages.length)],
         info: 'We are here to help',
         personInfo: {
+          id: member.memberID,
           firstname: member.firstname,
           lastname: member.lastname,
           birthdate: member.birthdate || 'N/A',

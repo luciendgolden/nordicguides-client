@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     exploreGuide(evt) {
-      let userId = evt.id;
+      let userId = evt.personInfo.id;
       this.$router.push({ name: 'guide.show', params: { id: userId } });
     },
   },

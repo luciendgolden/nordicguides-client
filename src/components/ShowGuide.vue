@@ -26,9 +26,17 @@
             <v-form>
               <v-container>
                 <v-layout row wrap>
-                  <v-flex xs12 sm6 v-for="(value, key) in guide.personInfo" :key="value.id">
+                  <v-flex xs12 sm6 v-for="(value, key) in guide.personInfo" :key="key">
                     <v-text-field :value="value" :label="key" readonly></v-text-field>
                   </v-flex>
+                  <div v-if="groupNames.length > 0 && languages.length > 0">
+                    <v-flex xs12 sm6>
+                      <v-combobox v-model="groupNames" label="Membergroups" chips multiple readonly></v-combobox>
+                    </v-flex>
+                    <v-flex xs12 sm6>
+                      <v-combobox v-model="languages" label="Languages" chips multiple readonly></v-combobox>
+                    </v-flex>
+                  </div>
                 </v-layout>
               </v-container>
             </v-form>
@@ -53,18 +61,30 @@
 <script>
 import HeroParallex from '@/components/HeroParallex.vue';
 
-import { mapState } from 'vuex';
+import Repository from '@/service/repository';
 
 export default {
   name: 'show-guide',
   data() {
-    return {};
+    return {
+      groups: [],
+      memberlanguages: [],
+    };
   },
   computed: {
-    ...mapState(['groups']),
+    languages() {
+      return this.memberlanguages.map(language => {
+        return language['language'] + ' ' + language['level'];
+      });
+    },
+    groupNames() {
+      return this.groups.map(group => group['groupname']);
+    },
     guide() {
       let id = this.$route.params.id;
-      return this.$store.getters.getGuides.find(element => element.id == id);
+      return this.$store.getters.getGuides.find(
+        element => element.personInfo.id == id,
+      );
     },
     displayInfo() {
       let img = this.guide.img;
@@ -79,9 +99,32 @@ export default {
     },
   },
   created() {
-    this.$store.dispatch('fetchGroups', {
-      id: this.$route.params.id,
-    });
+    let id = this.$route.params.id;
+
+    Promise.all([
+      new Promise(resolve => {
+        Repository.get(`/group/${id}`)
+          .then(res => res.data)
+          .then(data => {
+            this.groups = data;
+            resolve();
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }),
+      new Promise(resolve => {
+        Repository.get(`/memberlanguages/${id}`)
+          .then(res => res.data)
+          .then(data => {
+            this.memberlanguages = data;
+            resolve();
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }),
+    ]);
   },
   components: { HeroParallex },
 };
