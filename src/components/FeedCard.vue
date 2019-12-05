@@ -15,16 +15,17 @@
               text-color="white"
               small
               @click.stop
-            >{{article.category}}</v-chip>
-            <h3 class="title font-weight-bold mb-2">{{article.title}}</h3>
+              >{{ article.category }}</v-chip
+            >
+            <h3 class="title font-weight-bold mb-2">{{ article.title }}</h3>
             <v-layout>
               <v-flex xs12 md10 offset-md2>
-                <div class="subtitle">{{article.subheader}}</div>
+                <div class="subtitle">{{ article.subheader }}</div>
               </v-flex>
             </v-layout>
             <div class="caption">
               <br />
-              {{article.date}}
+              {{ article.date }}
             </div>
           </v-flex>
           <v-flex align-self-end>
@@ -34,7 +35,7 @@
               </router-link>
             </div>
             <div v-else>
-              <v-chip class="text-uppercase ma-0" color="primary" label small>Read More</v-chip>
+              <span></span>
             </div>
           </v-flex>
         </v-layout>

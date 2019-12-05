@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from './views/Home.vue';
-import Lapland from './views/Lapland.vue';
-import Auroras from './views/Auroras.vue';
-import Guides from './views/Guides.vue';
-import Contact from './views/Contact.vue';
+import ShowGuide from '@/components/ShowGuide';
+import Home from '@/views/Home.vue';
+import Lapland from '@/views/Lapland.vue';
+import Auroras from '@/views/Auroras.vue';
+import Guides from '@/views/Guides.vue';
+import Contact from '@/views/Contact.vue';
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,7 @@ const routes = [
   { path: '/blog/auroras', name: 'blog-auroras', component: Auroras },
   { path: '/guides', name: 'guides', component: Guides },
   { path: '/contact', name: 'contact', component: Contact },
+  { path: '/guide/:id', name: 'guide.show', component: ShowGuide },
 ];
 
 export default new VueRouter({
