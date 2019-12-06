@@ -80,7 +80,7 @@ export default {
         alignment: 'align-center',
         justify: 'justify-center',
         fillHeight: true,
-        img: 'hero-contact-bg.jpg',
+        img: 'section/hero-contact-bg.jpg',
         header: 'CONTACT US',
         cta: false,
       },

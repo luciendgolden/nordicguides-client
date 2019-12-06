@@ -67,7 +67,7 @@ export default {
         alignment: 'align-center',
         justify: 'justify-center',
         fillHeight: true,
-        img: 'hero-guides-bg.jpg',
+        img: 'section/hero-guides-bg.jpg',
         header: 'GUIDES',
         cta: false,
       },
@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     exploreGuide(evt) {
-      let userId = evt.personInfo.id;
+      const userId = evt.personInfo.id;
       this.$router.push({ name: 'guide.show', params: { id: userId } });
     },
   },

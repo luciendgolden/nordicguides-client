@@ -6,7 +6,7 @@
     "author": "Alexander",
     "date": "14.10.2019",
     "category": "Winter",
-    "img": "aurora.jpg"
+    "img": "section/aurora.jpg"
   },
   {
     "title": "MIDNIGHT SUN",
@@ -14,7 +14,7 @@
     "author": "Alexander",
     "date": "14.10.2019",
     "category": "Summer",
-    "img": "midnight.jpg"
+    "img": "section/midnight.jpg"
   },
   {
     "title": "AUTUMN",
@@ -22,7 +22,7 @@
     "author": "Alexander",
     "date": "15.10.2019",
     "category": "Autumn",
-    "img": "autumn.jpg"
+    "img": "section/autumn.jpg"
   },
   {
     "title": "SKIING",
@@ -30,7 +30,7 @@
     "author": "Alexander",
     "date": "15.10.2019",
     "category": "Winter",
-    "img": "winter.jpg"
+    "img": "section/winter.jpg"
   },
   {
     "title": "HUSKIES AND REINDEERS",
@@ -38,7 +38,7 @@
     "author": "Alexander",
     "date": "15.10.2019",
     "category": "Winter",
-    "img": "huskey.jpg"
+    "img": "section/huskey.jpg"
   },
   {
     "title": "SANTA CLAUS",
@@ -46,6 +46,6 @@
     "author": "Alexander",
     "date": "16.10.2019",
     "category": "Winter",
-    "img": "santa.jpg"
+    "img": "section/santa.jpg"
   }
 ]

@@ -84,36 +84,36 @@
 </template>
 
 <script>
-import HeroParallex from "@/components/HeroParallex.vue";
-import PhotoGrip from "@/components/PhotoGrip.vue";
+import HeroParallex from '@/components/HeroParallex.vue';
+import PhotoGrip from '@/components/PhotoGrip.vue';
 
 export default {
-  name: "auroras",
+  name: 'auroras',
   computed: {
     items() {
       const myArr = [];
 
       for (let i = 0; i < 9; i += 1) {
         myArr.push({
-          img: `aurora00${i + 1}.jpg`
+          img: `articles/aurora00${i + 1}.jpg`,
         });
       }
 
       return myArr;
-    }
+    },
   },
   data() {
     return {
       displayInfo: {
-        alignment: "align-center",
-        justify: "justify-center",
+        alignment: 'align-center',
+        justify: 'justify-center',
         fillHeight: true,
-        img: "hero-blog-bg.jpg",
-        header: "BLOG",
-        cta: false
-      }
+        img: 'section/hero-blog-bg.jpg',
+        header: 'BLOG',
+        cta: false,
+      },
     };
   },
-  components: { HeroParallex, PhotoGrip }
+  components: { HeroParallex, PhotoGrip },
 };
 </script>

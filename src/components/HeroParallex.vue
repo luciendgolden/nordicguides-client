@@ -1,5 +1,5 @@
 <template>
-  <v-parallax :src="require(`@/assets/section/${item.img}`)">
+  <v-parallax :src="require(`@/assets/${item.img}`)">
     <v-layout column>
       <v-flex xs12>
         <div class="resultContainer">

@@ -61,6 +61,14 @@ export default {
           path: '/guides',
         },
         {
+          title: 'Cities',
+          path: '/cities',
+        },
+        {
+          title: 'About',
+          path: '/about',
+        },
+        {
           title: 'Contact',
           path: '/contact',
         },

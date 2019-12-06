@@ -47,8 +47,6 @@ import Content from '@/components/core/Content.vue';
 import Footer from '@/components/core/MyFooter.vue';
 import ScrollUp from '@/components/core/ScrollUp.vue';
 
-import { mapActions } from 'vuex';
-
 export default {
   name: 'App',
   components: {

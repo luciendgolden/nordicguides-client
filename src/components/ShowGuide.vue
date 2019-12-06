@@ -92,7 +92,7 @@ export default {
         alignment: 'align-center',
         justify: 'justify-center',
         fillHeight: true,
-        img,
+        img: `section/${img}`,
         header: 'EXPLORE',
         cta: false,
       };

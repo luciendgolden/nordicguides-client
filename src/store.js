@@ -14,10 +14,17 @@ const store = new Vuex.Store({
   },
   actions: {
     fetchMembers({ commit }) {
-      Repository.get('/members')
-        .then(res => res.data)
-        .then(data => commit('SET_MEMBERS', data))
-        .catch(err => console.log(err));
+      return new Promise((resolve, reject) => {
+        Repository.get('/members')
+          .then(res => res.data)
+          .then(data => {
+            commit('SET_MEMBERS', data);
+            resolve();
+          })
+          .catch(err => {
+            reject(err);
+          });
+      });
     },
   },
   mutations: {

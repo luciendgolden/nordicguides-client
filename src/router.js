@@ -6,6 +6,8 @@ import Lapland from '@/views/Lapland.vue';
 import Auroras from '@/views/Auroras.vue';
 import Guides from '@/views/Guides.vue';
 import Contact from '@/views/Contact.vue';
+import About from '@/views/About';
+import Cities from '@/views/Cities';
 
 Vue.use(VueRouter);
 
@@ -14,6 +16,8 @@ const routes = [
   { path: '/lapland', name: 'lapland', component: Lapland },
   { path: '/blog/auroras', name: 'blog-auroras', component: Auroras },
   { path: '/guides', name: 'guides', component: Guides },
+  { path: '/cities', name: 'cities', component: Cities },
+  { path: '/about', name: 'about', component: About },
   { path: '/contact', name: 'contact', component: Contact },
   { path: '/guide/:id', name: 'guide.show', component: ShowGuide },
 ];

@@ -2,7 +2,7 @@
   <v-flex xs12 md6>
     <base-card :height="350" color="grey lighten-1" dark>
       <v-img
-        :src="require(`@/assets/section/${article.img}`)"
+        :src="require(`@/assets/${article.img}`)"
         height="100%"
         gradient="rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)"
       >
