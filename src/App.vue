@@ -57,6 +57,7 @@ export default {
   },
   created() {
     this.$store.dispatch('fetchMembers');
+    this.$store.dispatch('fetchCities');
   },
 };
 </script>

@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+
 import ShowGuide from '@/components/ShowGuide';
+import CityGuides from '@/components/CityGuides';
+import NotFound from '@/components/core/NotFound';
+
 import Home from '@/views/Home.vue';
 import Lapland from '@/views/Lapland.vue';
 import Auroras from '@/views/Auroras.vue';
@@ -20,6 +24,8 @@ const routes = [
   { path: '/about', name: 'about', component: About },
   { path: '/contact', name: 'contact', component: Contact },
   { path: '/guide/:id', name: 'guide.show', component: ShowGuide },
+  { path: '/cityguides/:id', name: 'cityguides.show', component: CityGuides },
+  { path: '*', component: NotFound },
 ];
 
 export default new VueRouter({

@@ -7,9 +7,7 @@
             <h1 class="display-3 font-weight-bold mb-3">{{item.header}}</h1>
             <div class="subheading pl-2 mb-4">{{item.subtitle}}</div>
             <div v-if="item.cta">
-              <v-btn color="primary" depressed round>
-                <strong>Learn more</strong>
-              </v-btn>
+              <v-btn color="primary" @click="item.evt" depressed round>Learn more</v-btn>
             </div>
           </v-layout>
         </div>
