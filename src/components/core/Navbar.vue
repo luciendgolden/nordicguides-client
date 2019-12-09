@@ -23,6 +23,13 @@
           >{{ item.title }}</v-btn>
           <v-spacer />
           <v-text-field append-icon="mdi-magnify" flat hide-details style="max-width: 300px;" />
+          <v-spacer />
+          <v-btn color="primary" @click="login" flat icon>
+            <v-icon>mdi-login</v-icon>
+          </v-btn>
+          <v-avatar>
+            <img :src="require('@/assets/guide/no-avatar.png')" alt="Not logged in" />
+          </v-avatar>
         </v-layout>
       </v-container>
     </v-toolbar>
@@ -42,6 +49,7 @@ export default {
     return {
       title: 'FINVILLE',
       drawer: false,
+      redirect: 'http://nordicguides-server.test/api/members',
       menu: [
         {
           title: 'Home',
@@ -78,6 +86,9 @@ export default {
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer;
+    },
+    login() {
+      location.href = this.redirect;
     },
   },
 };

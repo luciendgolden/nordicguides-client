@@ -27,7 +27,9 @@ export default {
         header: '404',
         subtitle:
           'We are sorry, the page you requested could not be found. Please go back to previous Page!',
-        cta: true,
+        cta: {
+          text: 'Go back',
+        },
         evt: () => {
           this.$router.go(-1);
         },
